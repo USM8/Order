@@ -1,0 +1,117 @@
+<html>
+
+<head></head>
+
+<body>
+
+<label for="FirstName">First Name:</label>
+    <input type="text" id="FirsName"/> 
+    <br>
+<label for="LastName">Last Name</label>
+    <input type="text" id="LastName"/> 
+    <br>
+
+    <Label for="city">City</Label>
+    <select id="city">
+        <option>
+            רמת גן
+        </option>
+        <option>
+            הרצליה
+        </option>
+
+        <option>
+            תל אביב
+        </option>
+
+        <option>
+            חיפה
+        </option>
+        <option>
+            גבעתיים
+        </option>
+        
+    </select>
+<br>
+    <label for="Street">Street: </label>
+    <input type="text" id="Street"/> 
+    <br>
+
+    <label for="Zipcode">Zip: </label>
+    <input type="text" id="Zipcode"/> 
+    <br>
+    <Label for="Item">Item:</Label>
+    <select id="Item"onchange="DoSomething()">
+        <option>
+        Please Select Item
+        </option>
+        <option id="Item1">
+        Item1
+        </option>
+        <option id="Item2">
+        Item2
+        </option>
+
+        <option id="Item3">
+        Item3
+        </option>
+        
+    </select>
+    <label for="Price">Item Price: </label>
+    <input type="text" id="Price"/>
+    <br>
+    <label for="Quantity">Quantity: </label>
+    <input type="text" id="Quantity"/>
+    <br>
+    <label for="Total">Total: </label>
+    <input type="text" id="Total"/>
+
+</div>  
+<br>
+<div>
+    <button onclick="calcSum()">Submit</button>
+</div>
+    <label for="Order">Order Details:</label>
+    <input type="text" id="Order">
+
+    
+    <script>
+
+function doSomething() {
+
+        let Item = document.getElementById('Item')
+        let Price
+    
+        switch(Item.value) {
+           
+
+            case 'Item1': 
+            Price = 9.90
+            break
+            case 'Item2':
+            Price = 19.90
+            break
+            case 'Item3':
+            Price = 29.90
+            break
+        }
+
+        Item.value = Price
+        
+
+       
+            console.log("Price", Item.value)
+
+let Quantity = document.getElementById('Quantity').value
+const Total = Item.value * Quantity.value
+
+consul.log(Total)
+
+
+        }
+
+function calcSum() {
+    Consul.log("FirsName", "LasrName", "city", "Street", "Zipcode", Item.value, Quantity.value, Total)
+
+}
+        
